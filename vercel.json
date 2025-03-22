@@ -1,1 +1,19 @@
-
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/status",
+      "dest": "/api/status.py"
+    },
+    {
+      "src": "/transcribe",
+      "dest": "/api/transcribe.py"
+    }
+  ]
+}
